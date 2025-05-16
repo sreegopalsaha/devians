@@ -1,7 +1,7 @@
+import HeroSection from "./hero-section";
+
 function LandingPage() {
-  return (
-    <div>page</div>
-  )
+  return <HeroSection />;
 }
 
 export default LandingPage;
