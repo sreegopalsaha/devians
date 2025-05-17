@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function AboutSection() {
   const stats = [
@@ -9,19 +10,27 @@ export default function AboutSection() {
     { value: "5+", label: "Mentors & Core Team" },
     { value: "2025", label: "Founded In" },
   ];
+  const navigate = useNavigate();
+
+  const handleJoinClick = () => {
+    navigate("/join");
+  };
 
   return (
     <section id="about" className="w-full flex flex-col md:flex-row">
       {/* left card */}
       <div className="rounded-none md:w-1/2 w-full text-white bg-gradient-to-r from-purple-800 to-purple-600 p-10 sm:p-12 lg:p-16 xl:p-20 flex flex-col justify-between gap-6">
-        <h2 className="text-3xl sm:text-4xl font-normal">What is Devians?</h2>
-        <p className="text-white leading-relaxed text-base font-poppins">
+        <h2 className="text-3xl sm:text-4xl font-normal font-mono">
+          What is Devians?
+        </h2>
+        <p className="text-white leading-relaxed text-base font-poppins font-mono">
           Devians is a student-driven tech community built for collaboration,
           learning, and innovation. From beginners exploring their first lines
           of code to hackathon winners shipping real projects — Devians is your
           squad to grow with.
         </p>
         <Button
+          onClick={handleJoinClick}
           variant="outline"
           className="text-white border-white bg-transparent hover:bg-white/10 py-2 px-6 rounded-md font-poppins font-normal"
         >

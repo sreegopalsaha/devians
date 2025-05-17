@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowDownCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleJoinClick = () => {
+    navigate("/join");
+  };
+
   return (
     <>
       <main className="w-full bg-black text-white flex items-center justify-start h-[90vh] px-4 sm:px-8 md:px-16 lg:px-32">
@@ -16,7 +23,10 @@ export default function HeroSection() {
           </p>
 
           <div className="flex gap-4">
-            <Button className="w-max bg-blue-600 hover:bg-blue-700 text-base px-6 py-3 rounded-lg flex items-center gap-2">
+            <Button
+              onClick={handleJoinClick}
+              className="w-max bg-blue-600 hover:bg-blue-700 text-base px-6 py-3 rounded-lg flex items-center gap-2"
+            >
               <Sparkles className="w-5 h-5" />
               Join the Movement
             </Button>
