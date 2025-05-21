@@ -8,7 +8,7 @@ interface propsType {
 
 function EventCard({ event }: propsType) {
   return (
-    <Card className="bg-neutral-900 border border-neutral-800 h-[40rem] flex flex-col justify-between items-center text-center hover:border-white transition-colors">
+    <Card className="bg-neutral-900 border border-neutral-800 h-[26rem] flex flex-col justify-between items-center text-center hover:border-white transition-colors">
       <CardHeader className="flex justify-center pt-8">
         <div className="w-24 h-24 rounded-full overflow-hidden">
           <img
