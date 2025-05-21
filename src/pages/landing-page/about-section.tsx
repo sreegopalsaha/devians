@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useData } from "@/contexts/DataProvider";
 import { useNavigate } from "react-router-dom";
 
 export default function AboutSection() {
-  const stats = [
-    { value: "100+", label: "Active Members" },
-    { value: "5+", label: "Colleges in West Bengal" },
-    { value: "10+", label: "Projects Built" },
-    { value: "5+", label: "Community Events" },
-    { value: "5+", label: "Mentors & Core Team" },
-    { value: "2025", label: "Founded In" },
-  ];
+
+  const {stats} = useData();
   const navigate = useNavigate();
 
   const handleJoinClick = () => {
