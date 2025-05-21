@@ -1,8 +1,8 @@
-interface eventType {
+interface EventType {
     title: string;
     date: string;
     location: string;
     image: string;
 }
 
-export type {eventType};
+export type {EventType};
