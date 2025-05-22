@@ -11,9 +11,9 @@ export default function HeroSection() {
 
   return (
     <>
-      <main className="w-full bg-black text-white flex items-center justify-start h-[90vh] px-4 sm:px-8 md:px-16 lg:px-32">
+      <main className="w-full bg-gradient-to-b from-black via-zinc-900 to-neutral-950 text-white flex items-center justify-start h-[90vh] px-4 sm:px-8 md:px-16 lg:px-32">
         <div className="flex flex-col h-full justify-center gap-8">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-mono font-semibold leading-tight tracking-tight">
             We Are <span className="text-blue-500">Devians</span>
           </h1>
 
@@ -25,13 +25,13 @@ export default function HeroSection() {
           <div className="flex gap-4">
             <Button
               onClick={handleJoinClick}
-              className="w-max bg-blue-600 hover:bg-blue-700 text-base px-6 py-3 rounded-lg flex items-center gap-2"
+              className="w-max bg-blue-600 hover:bg-blue-700 text-base px-6 py-3 rounded-lg flex items-center gap-2 font-mono"
             >
               <Sparkles className="w-5 h-5" />
               Join the Movement
             </Button>
 
-            <Button className="w-max border-white text-base px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-black transition">
+            <Button className="w-max border-white text-base px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-black transition font-mono">
               <ArrowDownCircle className="w-5 h-5" />
               Know More
             </Button>
