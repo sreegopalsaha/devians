@@ -9,7 +9,7 @@ export default function JoinUsSection() {
   };
 
   return (
-    <section className="w-full bg-black text-white py-20 px-4 sm:px-6 md:px-12 lg:px-24 border-t border-neutral-800">
+    <section className="w-full bg-neutral-950 text-white py-20 px-4 sm:px-6 md:px-12 lg:px-24 border-t border-neutral-800">
       <div className="w-full flex flex-col items-start gap-16">
         <div className="w-full max-w-4xl flex flex-col gap-6">
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">

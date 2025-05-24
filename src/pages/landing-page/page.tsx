@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import AboutSection from "./about-section";
 import EventsSection from "./events-section";
 import HeroSection from "./hero-section";
@@ -10,6 +11,7 @@ function LandingPage() {
       <AboutSection />
       <EventsSection />
       <JoinUsSection />
+      <Footer/>
     </div>
   );
 }
