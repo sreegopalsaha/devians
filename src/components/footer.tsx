@@ -1,76 +1,82 @@
 import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const getCurrentYear = () => new Date().getFullYear();
+
+const handleSponsorEmail = () => {
+  window.location.href =
+    "mailto:sreegopal0101@gmail.com?subject=Devians Sponsorship Opportunity";
+};
+
 const Footer = () => {
   return (
-    <footer className="bg-neutral-950 text-neutral-300 py-16 px-6 border-t border-neutral-800">
-      <div className="max-w-4xl mx-auto text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
-          DEVIANS COMMUNITY
-        </h2>
+    <footer className="bg-black text-neutral-300 py-20 px-6 md:px-16 border-t border-neutral-800">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white tracking-tight">
+              DEVIANS
+            </h2>
+            <p className="text-neutral-400 leading-relaxed">
+              A future-focused tech collective from West Bengal empowering the
+              next generation of developers.
+            </p>
+          </div>
 
-        <p className="text-neutral-400 text-base md:text-lg">
-          A future-focused tech collective from West Bengal — empowering the
-          next generation of developers.
-        </p>
+          {/* Contact */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Contact</h3>
+            <div className="flex items-center gap-3 text-neutral-400">
+              <Mail className="w-4 h-4" />
+              <span>sreegopal0101@gmail.com</span>
+            </div>
+            <Button
+              onClick={handleSponsorEmail}
+              className="bg-white text-black hover:bg-neutral-200 font-medium"
+            >
+              Become a Sponsor
+            </Button>
+          </div>
 
-        <p className="text-sm text-neutral-400">
-          <span className="text-white font-medium">
-            We’re actively looking for sponsorships
-          </span>{" "}
-          to support our events, initiatives, and community growth. Let’s
-          collaborate.
-        </p>
-
-        <div className="flex justify-center items-center gap-2 text-sm text-neutral-400">
-          <Mail className="w-4 h-4" />
-          <span>sreegopal0101@gmail.com</span>
+          {/* Social */}
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold">Follow Us</h3>
+            <div className="flex gap-4">
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-white transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        <Button
-          variant="outline"
-          className="mt-2 text-sm bg-neutral-700 border-neutral-800 text-white hover:bg-neutral-700 transition"
-          onClick={() =>
-            (window.location.href =
-              "mailto:sreegopal0101@gmail.com?subject=Devians Sponsorship Opportunity")
-          }
-        >
-          Become a Sponsor
-        </Button>
-
-        <div className="flex justify-center items-center gap-6 pt-6">
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn"
-            className="hover:text-white transition-colors"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Twitter"
-            className="hover:text-white transition-colors"
-          >
-            <Twitter className="w-6 h-6" />
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Instagram"
-            className="hover:text-white transition-colors"
-          >
-            <Instagram className="w-6 h-6" />
-          </a>
+        {/* Bottom */}
+        <div className="pt-8 border-t border-neutral-800 text-center">
+          <p className="text-neutral-500 text-sm">
+            © {getCurrentYear()} Devians. All rights reserved.
+          </p>
         </div>
-
-        <p className="text-xs text-neutral-500 pt-6">
-          © {new Date().getFullYear()} Devians. All rights reserved.
-        </p>
       </div>
     </footer>
   );
