@@ -3,8 +3,7 @@ import { useData } from "@/contexts/DataProvider";
 import { useNavigate } from "react-router-dom";
 
 export default function AboutSection() {
-
-  const {stats} = useData();
+  const { stats } = useData();
   const navigate = useNavigate();
 
   const handleJoinClick = () => {
@@ -12,7 +11,10 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="w-full flex flex-col md:flex-row">
+    <section
+      id="about"
+      className="w-full flex flex-col md:flex-row scroll-mt-0 sm:scroll-mt-0 md:scroll-mt-24 lg:scroll-mt-32"
+    >
       {/* left card */}
       <div className="rounded-none md:w-1/2 w-full text-white bg-gradient-to-r from-purple-800 to-purple-600 p-10 sm:p-12 lg:p-16 xl:p-20 flex flex-col justify-between gap-6">
         <h2 className="text-3xl sm:text-4xl font-normal font-mono">

@@ -9,6 +9,11 @@ export default function HeroSection() {
     navigate("/join");
   };
 
+  const handleScroll = () => {
+    const el = document.getElementById("about");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <main className="w-full bg-gradient-to-b from-black via-zinc-900 to-neutral-950 text-white flex items-center justify-start h-[90vh] px-4 sm:px-8 md:px-16 lg:px-32">
@@ -31,7 +36,10 @@ export default function HeroSection() {
               Join the Movement
             </Button>
 
-            <Button className="w-max border-white text-base px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-black transition font-mono">
+            <Button
+              onClick={handleScroll}
+              className="w-max border-white text-base px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-white hover:text-black transition font-mono"
+            >
               <ArrowDownCircle className="w-5 h-5" />
               Know More
             </Button>
