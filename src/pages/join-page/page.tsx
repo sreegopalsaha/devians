@@ -2,11 +2,11 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import type { ClickedLinks, CompletedSteps } from "@/types/types";
 
-import StepStart from "./StepStart";
-import Step1Details from "./Step1Details";
-import Step2Communities from "./Step2Communities";
-import Step3Social from "./Step3Social";
-import StepCongrats from "./StepCongrats";
+import StepStart from "./step-start";
+import Step1Details from "./step-one";
+import Step2Communities from "./step-two";
+import Step3Social from "./step-three";
+import StepCongrats from "./step-cong";
 
 const steps = {
   START: "START",
@@ -16,7 +16,7 @@ const steps = {
   CONGRATS: "CONGRATS",
 } as const;
 
-type StepKey = keyof typeof steps;
+export type StepKey = keyof typeof steps;
 
 export default function JoinDevians() {
   const [step, setStep] = useState<StepKey>("START");
