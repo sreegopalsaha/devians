@@ -56,7 +56,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
           href="https://discord.gg/"
           icon={MessageSquare}
           label="Discord Server"
-          description="Real-time discussions and support"
+          description="Join our server for live chats & support!"
           isClicked={clickedLinks.discord}
           onClicked={() => handleLinkClick("discord")}
         />
@@ -65,7 +65,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
           href="https://chat.whatsapp.com/"
           icon={Phone}
           label="WhatsApp Group"
-          description="Quick updates and announcements"
+          description="Join our group for quick updates and announcements"
           isClicked={clickedLinks.whatsapp}
           onClicked={() => handleLinkClick("whatsapp")}
         />

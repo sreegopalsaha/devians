@@ -35,7 +35,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
         <div>
           <div className="text-sm text-zinc-500 mb-1">Step 3 of 3</div>
           <h2 className="text-2xl font-semibold text-zinc-100">
-            Follow Social
+            Follow Us On Social
           </h2>
         </div>
         {completedSteps.step3 && (
@@ -50,7 +50,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
           href="https://linkedin.com/company/devians"
           icon={Linkedin}
           label="LinkedIn"
-          description="Professional updates and articles"
+          description="Follow for professional updates & insights!"
           isClicked={clickedLinks.linkedin}
           onClicked={() => handleLinkClick("linkedin")}
         />
@@ -59,7 +59,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
           href="https://instagram.com/devians.community"
           icon={Instagram}
           label="Instagram"
-          description="Visual content and community highlights"
+          description="Follow for updates & community moments!"
           isClicked={clickedLinks.instagram}
           onClicked={() => handleLinkClick("instagram")}
         />
@@ -68,7 +68,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
           href="https://twitter.com/devians_dev"
           icon={Twitter}
           label="X (Twitter)"
-          description="Quick updates and discussions"
+          description="Follow for quick updates & tech news!"
           isClicked={clickedLinks.twitter}
           onClicked={() => handleLinkClick("twitter")}
         />
