@@ -44,7 +44,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/"
+                href="https://linkedin.com/company/devians"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"
@@ -52,7 +52,7 @@ const Footer = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://twitter.com/the_devians"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Twitter className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com/"
+                href="https://instagram.com/the_devians"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"

@@ -56,7 +56,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
         />
 
         <SocialLink
-          href="https://instagram.com/devians.community"
+          href="https://instagram.com/the_devians"
           icon={Instagram}
           label="Instagram"
           description="Follow for updates & community moments!"
@@ -65,7 +65,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
         />
 
         <SocialLink
-          href="https://twitter.com/devians_dev"
+          href="https://x.com/the_devians"
           icon={Twitter}
           label="X (Twitter)"
           description="Follow for quick updates & tech news!"
