@@ -41,11 +41,11 @@ const events: EventType[] = [
 ];
 
 const stats: StatType[] = [
-  { value: "100+", label: "Active Members" },
+  { value: "200+", label: "Active Members" },
   { value: "5+", label: "Colleges in West Bengal" },
   { value: "10+", label: "Projects Built" },
   { value: "5+", label: "Community Events" },
-  { value: "5+", label: "Mentors & Core Team" },
+  { value: "10+", label: "Mentors & Core Team" },
   { value: "2025", label: "Founded In" },
 ];
 

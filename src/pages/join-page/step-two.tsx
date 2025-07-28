@@ -53,7 +53,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
 
       <div className="space-y-3">
         <SocialLink
-          href="https://discord.gg/"
+          href="https://discord.gg/UY7T57dqYE"
           icon={MessageSquare}
           label="Discord Server"
           description="Join our server for live chats & support!"
@@ -62,7 +62,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
         />
 
         <SocialLink
-          href="https://chat.whatsapp.com/"
+          href="https://chat.whatsapp.com/L8A5eDhSlhDFUgdkN0f1Wc"
           icon={Phone}
           label="WhatsApp Group"
           description="Join our group for quick updates and announcements"

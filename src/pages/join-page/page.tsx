@@ -53,7 +53,11 @@ export default function JoinDevians() {
   };
 
   const handleShareLinkedIn = () => {
-    console.log("clicked");
+    window.open(
+      "https://www.linkedin.com/sharing/share-offsite/?url=https://devians.xyz",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   const canProceedStep2 = clickedLinks.discord || clickedLinks.whatsapp;
