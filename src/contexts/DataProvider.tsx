@@ -14,31 +14,31 @@ const events: EventType[] = [
     title: "Kickoff: Inside the Devians Tech Movement",
     location: "Online",
     date: "Jun 6",
-    image: "/events.png",
+    image: "/event-placeholder.png",
   },
   {
     title: "Design with DevTools: Figma + Tailwind Tips",
     location: "Online",
     date: "Jun 18",
-    image: "/events.png",
+    image: "/event-placeholder.png",
   },
   {
     title: "Hackathon 101: Win Your First Hack",
     location: "Online",
     date: "Jun 30",
-    image: "/events.png",
+    image: "/event-placeholder.png",
   },
   {
     title: "Offline AI: Building Smart Tools Without Cloud",
     location: "Online",
     date: "Jul 10",
-    image: "/events.png",
+    image: "/event-placeholder.png",
   },
   {
     title: "Devians Open Mic: Build, Break, Brag!",
     location: "Online",
     date: "Jul 18",
-    image: "/events.png",
+    image: "/event-placeholder.png",
   },
 ];
 
