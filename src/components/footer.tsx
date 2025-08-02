@@ -1,14 +1,16 @@
 import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const getCurrentYear = () => new Date().getFullYear();
-
-const handleSponsorEmail = () => {
-  window.location.href =
-    "mailto:sreegopal0101@gmail.com?subject=Devians Sponsorship Opportunity";
-};
+import { useData } from "@/contexts/DataProvider";
 
 const Footer = () => {
+  const { socialLinks } = useData();
+
+  const getCurrentYear = () => new Date().getFullYear();
+
+  const handleSponsorEmail = () => {
+    window.location.href = `mailto:${socialLinks.email}?subject=Devians Sponsorship Opportunity`;
+  };
+
   return (
     <footer className="bg-black text-neutral-300 py-20 px-6 md:px-16 border-t border-neutral-800">
       <div className="max-w-6xl mx-auto">
@@ -29,7 +31,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold">Contact</h3>
             <div className="flex items-center gap-3 text-neutral-400">
               <Mail className="w-4 h-4" />
-              <span>sreegopal0101@gmail.com</span>
+              <span>{socialLinks.email}</span>
             </div>
             <Button
               onClick={handleSponsorEmail}
@@ -44,7 +46,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/company/devians"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"
@@ -52,7 +54,7 @@ const Footer = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://twitter.com/the_devians"
+                href={socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"
@@ -60,7 +62,7 @@ const Footer = () => {
                 <Twitter className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com/the_devians"
+                href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-white transition-colors"

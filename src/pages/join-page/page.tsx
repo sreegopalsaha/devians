@@ -7,6 +7,7 @@ import Step1Details from "./step-one";
 import Step2Communities from "./step-two";
 import Step3Social from "./step-three";
 import StepCongrats from "./step-cong";
+import { useData } from "@/contexts/DataProvider";
 
 const steps = {
   START: "START",
@@ -51,10 +52,11 @@ export default function JoinDevians() {
   const handleLinkClick = (platform: keyof ClickedLinks) => {
     setClickedLinks((prev) => ({ ...prev, [platform]: true }));
   };
+  const { socialLinks } = useData();
 
   const handleShareLinkedIn = () => {
     window.open(
-      "https://www.linkedin.com/sharing/share-offsite/?url=https://devians.xyz",
+      `https://www.linkedin.com/sharing/share-offsite/?url=${socialLinks.website}`,
       "_blank",
       "noopener,noreferrer"
     );

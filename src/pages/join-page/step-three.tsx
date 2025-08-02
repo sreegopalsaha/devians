@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import type { ClickedLinks, CompletedSteps } from "@/types/types";
 import SocialLink from "@/components/social-link";
 import type { StepKey } from "./page";
+import { useData } from "@/contexts/DataProvider";
 
 interface Step3SocialProps {
   clickedLinks: ClickedLinks;
@@ -22,6 +23,8 @@ const Step3Social: React.FC<Step3SocialProps> = ({
   completedSteps,
   canProceed,
 }) => {
+  const { socialLinks } = useData();
+
   return (
     <motion.div
       key="step3"
@@ -47,7 +50,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
 
       <div className="space-y-3">
         <SocialLink
-          href="https://linkedin.com/company/devians"
+          href={socialLinks.linkedin!}
           icon={Linkedin}
           label="LinkedIn"
           description="Follow for professional updates & insights!"
@@ -56,7 +59,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
         />
 
         <SocialLink
-          href="https://instagram.com/the_devians"
+          href={socialLinks.instagram!}
           icon={Instagram}
           label="Instagram"
           description="Follow for updates & community moments!"
@@ -65,7 +68,7 @@ const Step3Social: React.FC<Step3SocialProps> = ({
         />
 
         <SocialLink
-          href="https://x.com/the_devians"
+          href={socialLinks.twitter!}
           icon={Twitter}
           label="X (Twitter)"
           description="Follow for quick updates & tech news!"

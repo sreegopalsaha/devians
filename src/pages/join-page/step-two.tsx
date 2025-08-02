@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import type { ClickedLinks, CompletedSteps } from "@/types/types";
 import SocialLink from "@/components/social-link";
 import type { StepKey } from "./page";
+import { useData } from "@/contexts/DataProvider";
 
 interface Step2CommunitiesProps {
   clickedLinks: ClickedLinks;
@@ -28,6 +29,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
   completedSteps,
   canProceed,
 }) => {
+  const {socialLinks} = useData();
   return (
     <motion.div
       key="step2"
@@ -53,7 +55,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
 
       <div className="space-y-3">
         <SocialLink
-          href="https://discord.gg/UY7T57dqYE"
+          href={socialLinks.discord!}
           icon={MessageSquare}
           label="Discord Server"
           description="Join our server for live chats & support!"
@@ -62,7 +64,7 @@ const Step2Communities: React.FC<Step2CommunitiesProps> = ({
         />
 
         <SocialLink
-          href="https://chat.whatsapp.com/L8A5eDhSlhDFUgdkN0f1Wc"
+          href={socialLinks.whatsapp!}
           icon={Phone}
           label="WhatsApp Group"
           description="Join our group for quick updates and announcements"

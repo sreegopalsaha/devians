@@ -1,42 +1,44 @@
 import type { EventType } from "@/types/event-types";
+import type { SocialLinksType } from "@/types/socials-types";
 import type { StatType } from "@/types/stat-types";
 import { createContext, useContext } from "react";
 
 type DataContextType = {
   events: EventType[];
   stats: StatType[];
+  socialLinks: SocialLinksType;
 };
 
 const events: EventType[] = [
   {
-    title: "Intro to Git & GitHub for Beginners",
+    title: "Kickoff: Inside the Devians Tech Movement",
     location: "Online",
-    date: "Jul 30",
-    image: "/events/git-github.png",
+    date: "Jun 6",
+    image: "/events.png",
   },
   {
-    title: "Getting Started with bkite: A Backend Starter Tool",
+    title: "Design with DevTools: Figma + Tailwind Tips",
     location: "Online",
-    date: "Aug 2",
-    image: "/events/bkite-intro.png",
+    date: "Jun 18",
+    image: "/events.png",
   },
   {
-    title: "What is Devians? Inside the Student Tech Movement",
+    title: "Hackathon 101: Win Your First Hack",
     location: "Online",
-    date: "Aug 4",
-    image: "/events/devians-session.png",
+    date: "Jun 30",
+    image: "/events.png",
   },
   {
-    title: "Build a Portfolio with React + Vite + Shadcn",
+    title: "Offline AI: Building Smart Tools Without Cloud",
     location: "Online",
-    date: "Aug 6",
-    image: "/events/portfolio-react.png",
+    date: "Jul 10",
+    image: "/events.png",
   },
   {
-    title: "Demystifying Open Source: How to Contribute the Right Way",
+    title: "Devians Open Mic: Build, Break, Brag!",
     location: "Online",
-    date: "Aug 8",
-    image: "/events/open-source.png",
+    date: "Jul 18",
+    image: "/events.png",
   },
 ];
 
@@ -49,11 +51,21 @@ const stats: StatType[] = [
   { value: "2025", label: "Founded In" },
 ];
 
+const socialLinks: SocialLinksType = {
+  linkedin: "https://www.linkedin.com/company/devians",
+  instagram: "https://www.instagram.com/the_devians",
+  whatsapp: "https://chat.whatsapp.com/L8A5eDhSlhDFUgdkN0f1Wc",
+  twitter: "https://www.x.com/the_devians",
+  discord: "https://discord.gg/UY7T57dqYE",
+  email: "sreegopal0101@gmail.com",
+  website: "https://devians.vercel.app",
+};
+
 const DataContext = createContext<DataContextType | null>(null);
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   return (
-    <DataContext.Provider value={{ events, stats }}>
+    <DataContext.Provider value={{ events, stats, socialLinks }}>
       {children}
     </DataContext.Provider>
   );
