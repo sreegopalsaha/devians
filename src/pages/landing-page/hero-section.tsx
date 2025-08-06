@@ -16,8 +16,10 @@ export default function HeroSection() {
 
   return (
     <>
-      <main className="w-full bg-gradient-to-b from-black via-zinc-900 to-neutral-950 text-white flex items-center justify-start h-[90vh] px-4 sm:px-8 md:px-16 lg:px-32">
-        <div className="flex flex-col h-full justify-center gap-8">
+      <main className="relative w-full h-[90vh] bg-black overflow-hidden text-white flex items-center px-4 sm:px-8 md:px-16 lg:px-32">
+        <div className="absolute inset-1 bg-[url('/hero-pattern.png')] bg-no-repeat bg-cover bg-center blur-md z-0" />
+
+        <div className="relative z-10 flex flex-col h-full justify-center gap-8">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-mono font-semibold leading-tight tracking-tight">
             We Are <span className="text-blue-500">Devians</span>
           </h1>
